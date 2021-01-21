@@ -1,0 +1,75 @@
+/* Generic css goes first. This css applies to all screen widths unless it's overwritten in a media query. */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    color: #fff;
+}
+
+header,
+footer {
+	width: 100%;
+	line-height: 4;
+	text-align: center;
+	background-color: #eeeeee;
+	color: #333333;
+}
+
+h1 {
+	font-size: 20px;
+}
+
+.a,
+.b,
+.c {
+	font-size: 72px;
+    padding: 20px;
+    background-color: #a91b0d;
+    /*a percentage of the current browser viewpoint*/
+    width: 100vw;
+    height: calc(100vh/3);
+}
+
+.b {
+    background-color: #fe9547;
+}
+
+.c {
+    background-color: #fed547;
+}
+
+@media only screen and (min-width: 800px) {
+	.a {
+		background-color: #39d339;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.b {
+		background-color: #3999d3;
+	}
+
+	h1 {
+		font-size: 36px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.c {
+		background-color: #a543e8;
+	}
+
+	main {
+		width: 75vw;
+		margin: 0 auto;
+	}
+
+	.a, .b, .c {
+		width: 25vw;
+		margin: 0 auto;
+	}
+
+	.responsive {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
